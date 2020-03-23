@@ -109,7 +109,7 @@ class CSR(implicit val p: Parameters) extends Module with CoreParams {
   val instreth = RegInit(0.U(xlen.W))
 
   val mcpuid  = Cat(0.U(2.W) /* RV32I */, 0.U((xlen-28).W),
-                    (1 << ('I' - 'A') /* Base ISA */| 
+                    (1 << ('I' - 'A') /* Base ISA */ | 
                      1 << ('U' - 'A') /* User Mode */).U(26.W))
   val mimpid  = 0.U(xlen.W) // not implemented
   val mhartid = 0.U(xlen.W) // only one hart

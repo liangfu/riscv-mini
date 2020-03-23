@@ -51,7 +51,7 @@ $(custom_bmark_out): $(base_dir)/VTile $(custom_bmark_hex)
 	$^ $(patsubst %.out,%.vcd,$@) 2> $@
 
 run-custom-bmark: $(custom_bmark_out) 
-	
+
 # unit tests + integration tests 
 test:
 	$(SBT) $(SBT_FLAGS) test
